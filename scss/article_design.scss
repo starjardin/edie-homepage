@@ -1,0 +1,30 @@
+@import "variables.scss";
+.design__picture > img {
+  border-radius: 12px;
+}
+
+@media (min-width : $min-width) {
+  .design__pictures {
+    display : flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content : space-between;
+  }
+
+  .design__picture:nth-of-type(1) {
+    padding-top: 6rem;
+    flex-basis : 48%;
+  }
+  .design__picture:nth-of-type(2) {
+    padding-bottom: 6rem;
+    flex-basis : 48%;
+  }
+  .design__picture:nth-of-type(3) {
+    padding-top: 6rem;
+    flex-basis : 48%;
+  }
+  .design__picture:nth-of-type(4) {
+    padding-bottom: 6rem;
+    flex-basis : 48%;
+  }
+}
