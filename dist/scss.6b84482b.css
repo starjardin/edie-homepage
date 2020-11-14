@@ -3,4 +3,114 @@ img {
   height: 100%;
 }
 
+.masthead__img {
+  border-radius: 18px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header__navigation {
+  display: none;
+  transition: 0.3s;
+  position: relative;
+}
+.header__navigation .navigation__list {
+  list-style: none;
+}
+.header__navigation .navigation__list .navigation__anchor {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.header__heading {
+  order: 0;
+}
+
+#menu {
+  display: none;
+}
+
+.header__container > label {
+  order: 2;
+  background-image: url("/menu.f70022a6.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+}
+.header__container > label span {
+  visibility: hidden;
+}
+
+#menu:checked ~ .header__navigation {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #cccccc;
+  height: 100vh;
+  width: 30vw;
+}
+
+.header__navigation > label {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-image: url("/x-circle.c5be6a9e.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  cursor: pointer;
+}
+.header__navigation > label span {
+  visibility: hidden;
+}
+
+@media (min-width: 520px) {
+  .header__navigation {
+    display: block;
+  }
+  .header__navigation .navigation__lists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__navigation label {
+    display: none;
+  }
+
+  .header__container > label {
+    display: none;
+  }
+}
+.masthead__container {
+  padding-left: 15%;
+}
+
+.masthead__heading {
+  max-width: 450px;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 72px;
+  color: #333333;
+  margin-block: 0;
+  padding-block-end: 1.4rem;
+}
+
+.masthead__info {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #2D9CDB;
+}
+
 /*# sourceMappingURL=/scss.6b84482b.css.map */

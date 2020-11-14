@@ -1,0 +1,81 @@
+@import "mixins.scss";
+@import "variables.scss";
+
+.header__container {
+  @include flex-row;
+  position: relative;
+}
+
+.header__navigation {
+  // transform: translateX(-500px);
+  display: none;
+  transition: .3s;
+  position: relative;
+  & .navigation__list {
+    list-style: none;
+    .navigation__anchor {
+      text-decoration: none;
+      display: inline-block;
+      padding: 1rem;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.header__heading {
+  order: 0;
+}
+
+#menu {
+  display: none;
+}
+
+.header__container > label {
+  order: 2;
+  background-image: img("menu.svg");
+  @include center-bg;
+  span {
+    visibility: hidden;
+  }
+  cursor: pointer;
+}
+
+#menu:checked ~ .header__navigation {
+  // transform: translateX(0);
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #cccccc;
+  height: 100vh;
+  width: 30vw;
+}
+
+.header__navigation > label {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-image : img("x-circle.svg");
+  @include center-bg;
+  span {
+    visibility: hidden;
+  }
+  cursor: pointer;
+}
+
+@media (min-width : $min-width) {
+  .header__navigation {
+    display: block;
+    .navigation__lists {
+      @include flex-row;
+    }
+
+    label {
+      display: none;
+    }
+  }
+
+  .header__container > label {
+    display: none;
+  }
+}

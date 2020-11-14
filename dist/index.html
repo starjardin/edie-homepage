@@ -8,31 +8,39 @@
 <script src="/scss.6b84482b.js"></script></head>
 <body>
   <header class="header">
-    <h1 class="header__heading">Eddie</h1>
-    <nav class="header__navigation">
-      <ul class="navigation__lists">
-        <li class="navigation__list">
-          <a href="/" class="navigation__anchor">home</a>
-        </li>
-        <li class="navigation__list">
-          <a href="/services" class="navigation__anchor">services</a>
-        </li>
-        <li class="navigation__list">
-          <a href="/our-works" class="navigation__anchor">Our works</a>
-        </li>
-        <li class="navigation__list">
-          <a href="/clients" class="navigation__anchor">clients</a>
-        </li>
-        <li class="navigation__list">
-          <a href="/contact" class="navigation__anchor">contact</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="header__container">
+      <h1 class="header__heading">Eddie</h1>
+      <label for="menu"><span>check</span></label>
+      <input type="checkbox" id="menu">
+      <nav class="header__navigation">
+        <label for="menu"><span>check</span></label>
+        <ul class="navigation__lists">
+          <li class="navigation__list">
+            <a href="/" class="navigation__anchor">home</a>
+          </li>
+          <li class="navigation__list">
+            <a href="/services" class="navigation__anchor">services</a>
+          </li>
+          <li class="navigation__list">
+            <a href="/our-works" class="navigation__anchor">Our works</a>
+          </li>
+          <li class="navigation__list">
+            <a href="/clients" class="navigation__anchor">clients</a>
+          </li>
+          <li class="navigation__list">
+            <a href="/contact" class="navigation__anchor">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
     <header class="masthead">
-      <h2 class="masthead__heading">We create beautiful and fast web services</h2>
+      <div class="masthead__container">
+        <p class="masthead__info">unhappy with your website</p>
+        <h2 class="masthead__heading">We create beautiful and fast web services</h2>
+      </div>
       <img src="/heroImage.91252002.jpg" alt="heroImage" class="masthead__img">
     </header>
 
