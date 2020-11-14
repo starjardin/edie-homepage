@@ -1,0 +1,87 @@
+@import "variables.scss";
+
+.sevices__heading {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+  padding-inline-start : 5%;
+}
+
+.services__card {
+  margin-left: 1rem;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding-bottom: 4rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+
+.services__card::before {
+  content : "";
+  display : block;
+  width : 2rem;
+  height : 2rem;
+  background-position : center center;
+  margin-inline : auto;
+  border-radius : 16px;
+  padding : 1rem;
+  background-size : 2rem 2rem;
+  background-repeat : no-repeat;
+}
+
+.services__card:nth-of-type(1)::before {
+  background-image : img("edit.svg");
+  background-color : #2D9CDB;
+}
+.services__card:nth-of-type(2)::before {
+  background-image : img("chevron-left.svg"), img("chevron-right.svg");
+  background-position : 25%, 75%;
+  background-color : #27AE60;
+}
+.services__card:nth-of-type(3)::before {
+  background-image : img("back-end.svg");
+  background-color :  #EB5757;
+}
+
+.services__card:hover {
+  box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+  padding-bottom: 3rem;
+  .services__btn {
+    background-color: #2D9CDB;
+    cursor : pointer;
+  }
+}
+
+.services__sub-heading {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: #333333;
+}
+
+.services__btn {
+  background: #E0E0E0;
+  border-radius: 12px;
+  padding-block: .5rem;
+  padding-inline: 1rem;
+  border: none;
+}
+
+.services__desc {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #4F4F4F;
+}
+
+.services__card > * {
+  margin-inline-start : 5%;
+}
+
+@media (min-width : $min-width) {
+  .services__cards {
+    display : flex;
+    flex-direction : row;
+  }
+}
