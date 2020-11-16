@@ -1,26 +1,30 @@
 @font-face {
   font-family: "Poppins";
-  font-family: 700;
-  font-family: normal;
+  font-weight: 700;
+  font-style: normal;
   src: local("Poppins-Regular"), url("/Poppins-400.e935a4bb.woff") format("woff"), url("/Poppins-300.af955319.woff") format("woff"), url("/Poppins-500.6db15a2e.woff") format("woff"), url("/Poppins-Black.ab7e5651.woff") format("woff");
 }
 @font-face {
   font-family: "Poppins";
-  font-family: 500;
-  font-family: normal;
+  font-weight: 500;
+  font-style: normal;
   src: local("Poppins-Regular"), url("/Poppins-400.e935a4bb.woff") format("woff"), url("/Poppins-300.af955319.woff") format("woff"), url("/Poppins-500.6db15a2e.woff") format("woff"), url("/Poppins-Black.ab7e5651.woff") format("woff");
 }
 @font-face {
   font-family: "Poppins";
-  font-family: 300;
-  font-family: normal;
+  font-weight: 300;
+  font-style: normal;
   src: local("Poppins-Regular"), url("/Poppins-400.e935a4bb.woff") format("woff"), url("/Poppins-300.af955319.woff") format("woff"), url("/Poppins-500.6db15a2e.woff") format("woff"), url("/Poppins-Black.ab7e5651.woff") format("woff");
 }
 @font-face {
   font-family: "Poppins";
-  font-family: 400;
-  font-family: normal;
+  font-weight: 400;
+  font-style: normal;
   src: local("Poppins-Regular"), url("/Poppins-400.e935a4bb.woff") format("woff"), url("/Poppins-300.af955319.woff") format("woff"), url("/Poppins-500.6db15a2e.woff") format("woff"), url("/Poppins-Black.ab7e5651.woff") format("woff");
+}
+@font-face {
+  font-family: "Heebo";
+  src: url(/Heebo-800.5a6ed6b6.woff) format("woff");
 }
 body {
   margin: 0;
@@ -30,6 +34,8 @@ body {
 
 body * {
   font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
 }
 
 article {
@@ -74,6 +80,8 @@ img {
 
 .header__heading {
   order: 0;
+  font-family: "Heebo";
+  font-weight: 800;
 }
 
 #menu {
@@ -331,11 +339,25 @@ img {
 }
 
 .design__anchor {
-  display: block;
+  display: inline-block;
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   color: #2D9CDB;
+  background-image: url("/arrow-right.04922524.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 3rem;
+  text-decoration: none;
+  margin-block-start: 5rem;
+  transition: 0.4s;
+}
+
+.design__anchor:hover {
+  transform: scale(1.1);
+  background-color: #2D9CDB;
+  color: #fff;
+  border-radius: 3px;
 }
 
 @media (min-width: 620px) {
@@ -368,9 +390,9 @@ img {
   }
 
   .design__anchor {
-    padding-block-start: 5rem;
+    display: block;
     text-align: end;
-    text-decoration: none;
+    margin: 0;
   }
 }
 .meet {
