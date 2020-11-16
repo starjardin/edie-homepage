@@ -25,5 +25,7 @@ $fonts : (
 
 @font-face {
   font-family: "Heebo";
-  src: url(../fonts/Heebo-800.woff) format("woff");
+  src: 
+      url(../fonts/Heebo-800.woff) format("woff"),
+      url(../fonts/Heebo-800.woff2) format("woff2");
 }

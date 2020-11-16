@@ -4,5 +4,8 @@ img {
 }
 
 .masthead__img {
+  display: block;
+  width: 97%;
   border-radius: 18px;
+  margin-inline: auto;
 }
