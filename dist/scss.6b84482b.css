@@ -110,7 +110,7 @@ img {
   visibility: hidden;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 620px) {
   .header__navigation {
     display: block;
   }
@@ -179,7 +179,7 @@ img {
   line-height: 15px;
   color: #828282;
 }
-.purpose__contact input {
+.purpose__contact [type=email] {
   background: #F2F2F2;
   border-radius: 12px;
   padding-block: 1rem;
@@ -203,6 +203,10 @@ img {
 .purpose__contact .purpose__btn--submit:focus {
   border: 1px solid blue;
   outline-style: none;
+}
+
+[type=email]:focus ~ button {
+  position: inherit;
 }
 
 .sevices__heading {
@@ -287,7 +291,7 @@ img {
   margin-inline-start: 5%;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 620px) {
   .services__cards {
     display: flex;
     flex-direction: row;
@@ -320,7 +324,7 @@ img {
   max-width: 448px;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 620px) {
   .design__pictures {
     display: flex;
     flex-direction: row;
@@ -451,7 +455,7 @@ img {
   flex-direction: column;
 }
 
-@media (min-width: 520px) {
+@media (min-width: 620px) {
   .meet__container {
     display: flex;
     flex-direction: row;
@@ -474,8 +478,9 @@ img {
 
 .footer li {
   list-style: none;
+  padding-block: 0.5rem;
 }
-.footer li a {
+.footer li .navigation__anchor {
   text-decoration: none;
   text-transform: capitalize;
   color: #ffffff;
@@ -483,6 +488,10 @@ img {
 
 .footer__navigation > ul {
   padding: 0;
+}
+
+.footer__media {
+  padding-top: 5rem;
 }
 
 .media__lists {
@@ -512,12 +521,21 @@ img {
   background-image: url("/linkedin.b71b7340.svg");
 }
 
-@media (min-width: 520px) {
+@media (min-width: 620px) {
   .footer__container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    align-items: baseline;
+  }
+
+  .footer .purpose__contact {
+    min-width: 350px;
+  }
+
+  .footer__media {
+    padding-top: 0;
   }
 }
 

@@ -31,7 +31,7 @@
     color: #828282;
   }
 
-  input {
+  [type="email"] {
     background: #F2F2F2;
     border-radius: 12px;
     padding-block: 1rem;
@@ -58,4 +58,8 @@
     border: 1px solid blue;
     outline-style: none;
   }
+}
+
+[type="email"]:focus ~ button {
+  position: inherit;
 }
