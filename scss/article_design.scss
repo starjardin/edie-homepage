@@ -26,6 +26,14 @@
   max-width: 448px;
 }
 
+.design__anchor {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #2D9CDB;
+}
+
 @media (min-width : $min-width) {
   .design__pictures {
     display : flex;
@@ -50,5 +58,11 @@
   .design__picture:nth-of-type(4) {
     padding-bottom: 15%;
     flex-basis : 48%;
+  }
+
+  .design__anchor {
+    padding-block-start: 5rem;
+    text-align: end;
+    text-decoration: none;
   }
 }
