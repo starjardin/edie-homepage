@@ -117,79 +117,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/bundle-url.js"}],"scss/index.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\fonts\\Poppins-400.woff":[["Poppins-400.e935a4bb.woff","fonts/Poppins-400.woff"],"fonts/Poppins-400.woff"],"./..\\fonts\\Poppins-300.woff":[["Poppins-300.af955319.woff","fonts/Poppins-300.woff"],"fonts/Poppins-300.woff"],"./..\\fonts\\Poppins-500.woff":[["Poppins-500.6db15a2e.woff","fonts/Poppins-500.woff"],"fonts/Poppins-500.woff"],"./..\\fonts\\Poppins-Black.woff":[["Poppins-Black.ab7e5651.woff","fonts/Poppins-Black.woff"],"fonts/Poppins-Black.woff"],"./..\\assets\\menu.svg":[["menu.f70022a6.svg","assets/menu.svg"],"assets/menu.svg"],"./..\\assets\\x-circle.svg":[["x-circle.c5be6a9e.svg","assets/x-circle.svg"],"assets/x-circle.svg"],"./..\\assets\\edit.svg":[["edit.4c7be04f.svg","assets/edit.svg"],"assets/edit.svg"],"./..\\assets\\chevron-left.svg":[["chevron-left.971fad58.svg","assets/chevron-left.svg"],"assets/chevron-left.svg"],"./..\\assets\\chevron-right.svg":[["chevron-right.a9695ff7.svg","assets/chevron-right.svg"],"assets/chevron-right.svg"],"./..\\assets\\back-end.svg":[["back-end.85db0521.svg","assets/back-end.svg"],"assets/back-end.svg"],"./..\\assets\\twitter.svg":[["twitter.9c616447.svg","assets/twitter.svg"],"assets/twitter.svg"],"./..\\assets\\instagram.svg":[["instagram.1f0f2107.svg","assets/instagram.svg"],"assets/instagram.svg"],"./..\\assets\\linkedin.svg":[["linkedin.b71b7340.svg","assets/linkedin.svg"],"assets/linkedin.svg"],"_css_loader":"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/css-loader.js"}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"index.js":[function(require,module,exports) {
+var navTemplate = document.querySelector(".template");
+var headerNav = document.querySelector(".header__navigation");
+var footer = document.querySelector(".footer");
+var footerNav = footer.querySelector(".footer__navigation");
+var headerNavContent = document.importNode(navTemplate.content, true);
+var footerNavContent = document.importNode(navTemplate.content, true);
+var footerFormContact = footer.querySelector('.footer__form-contact');
+var fromContactTemplate = document.querySelector(".form-template");
+var purposeForm = document.querySelector('.purpose__container');
+footerNav.appendChild(headerNavContent);
+headerNav.appendChild(footerNavContent);
+footerFormContact.appendChild(document.importNode(fromContactTemplate.content, true));
+purposeForm.appendChild(document.importNode(fromContactTemplate.content, true));
+},{}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +335,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/scss.6b84482b.js.map
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/edie-homepage.e31bb0bc.js.map

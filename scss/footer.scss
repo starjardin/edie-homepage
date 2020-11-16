@@ -1,0 +1,58 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.footer {
+  background-color: #100E1D;
+  color: #ffffff;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      text-transform: capitalize;
+      color: #ffffff;
+    }
+}
+
+.footer__navigation > ul {
+  padding: 0;
+}
+
+.media__lists {
+  @include flex-row;
+  padding: 0;
+  justify-content: initial;
+  span {
+    display: none;
+  }
+
+  .media__anchor {
+    display: block;
+    background-repeat: no-repeat;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .twitter {
+    background-image: img("twitter.svg");
+  }
+
+  .instagram {
+    background-image: img("instagram.svg");
+  }
+
+  .linkedin {
+    background-image: img("linkedin.svg");
+  }
+}
+
+@media (min-width : $min-width) {
+  .footer__container {
+    @include flex-row;
+  }
+}
