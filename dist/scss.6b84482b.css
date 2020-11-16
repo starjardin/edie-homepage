@@ -22,6 +22,10 @@
   font-family: normal;
   src: local("Poppins-Regular"), url("/Poppins-400.e935a4bb.woff") format("woff"), url("/Poppins-300.af955319.woff") format("woff"), url("/Poppins-500.6db15a2e.woff") format("woff"), url("/Poppins-Black.ab7e5651.woff") format("woff");
 }
+body {
+  margin: 0;
+}
+
 body * {
   font-family: "Poppins";
 }
