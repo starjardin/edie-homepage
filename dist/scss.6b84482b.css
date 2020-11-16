@@ -24,10 +24,16 @@
 }
 body {
   margin: 0;
+  max-width: 1444px;
+  margin: auto;
 }
 
 body * {
   font-family: "Poppins";
+}
+
+article {
+  padding: 1rem;
 }
 
 .container {
@@ -355,7 +361,7 @@ img {
 }
 .meet {
   padding-top: 15%;
-  padding-bottom: 20%;
+  padding-bottom: 15%;
 }
 
 .meet__team {
@@ -399,6 +405,7 @@ img {
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+  padding-top: 3rem;
 }
 
 .meet__img {
@@ -424,6 +431,7 @@ img {
   font-size: 36px;
   line-height: 54px;
   color: #333333;
+  max-width: 937px;
 }
 
 .profile__name {
@@ -442,17 +450,27 @@ img {
 
 .edie__profile {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: initial;
+  padding-top: 2rem;
 }
 
 .profile__img {
   width: 4rem;
   height: 4rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-right: 2rem;
 }
 
 .edie__profile > div {
   display: flex;
   flex-direction: column;
+}
+
+.meet__edie {
+  padding-top: 8rem;
 }
 
 @media (min-width: 620px) {
