@@ -12,20 +12,20 @@ $fonts : (
     font-style : map-get($font, style);
     src : 
           local('#{map-get($font, family)}-Regular'),
-          url('../fonts/#{map-get($font, filename)}-400.woff') format("woff"),
-          url('../fonts/#{map-get($font, filename)}-300.woff') format("woff"),
-          url('../fonts/#{map-get($font, filename)}-500.woff') format("woff"),
-          url('../fonts/#{map-get($font, filename)}-Black.woff') format("woff"),
-          url('../fonts/#{map-get($font, filename)}-400.woff2') format("woff2"),
-          url('../fonts/#{map-get($font, filename)}-300.woff2') format("woff2"),
-          url('../fonts/#{map-get($font, filename)}-500.woff2') format("woff2"),
-          url('../fonts/#{map-get($font, filename)}-Black.woff2') format("woff2"),
+          url('../webroot/fonts/#{map-get($font, filename)}-400.woff') format("woff"),
+          url('../webroot/fonts/#{map-get($font, filename)}-300.woff') format("woff"),
+          url('../webroot/fonts/#{map-get($font, filename)}-500.woff') format("woff"),
+          url('../webroot/fonts/#{map-get($font, filename)}-Black.woff') format("woff"),
+          url('../webroot/fonts/#{map-get($font, filename)}-400.woff2') format("woff2"),
+          url('../webroot/fonts/#{map-get($font, filename)}-300.woff2') format("woff2"),
+          url('../webroot/fonts/#{map-get($font, filename)}-500.woff2') format("woff2"),
+          url('../webroot/fonts/#{map-get($font, filename)}-Black.woff2') format("woff2"),
   }
 }
 
 @font-face {
   font-family: "Heebo";
   src: 
-      url(../fonts/Heebo-800.woff) format("woff"),
-      url(../fonts/Heebo-800.woff2) format("woff2");
+      url(../webroot/fonts/Heebo-800.woff) format("woff"),
+      url(../webroot/fonts/Heebo-800.woff2) format("woff2");
 }
