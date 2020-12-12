@@ -122,15 +122,15 @@ var navTemplate = document.querySelector(".template");
 var headerNav = document.querySelector(".header__navigation");
 var footer = document.querySelector(".footer");
 var footerNav = footer.querySelector(".footer__navigation");
+var footerFormContact = footer.querySelector('.footer__form-contact');
 var headerNavContent = document.importNode(navTemplate.content, true);
 var footerNavContent = document.importNode(navTemplate.content, true);
-var footerFormContact = footer.querySelector('.footer__form-contact');
-var fromContactTemplate = document.querySelector(".form-template");
+var formContactTemplate = document.querySelector(".form-template");
 var purposeForm = document.querySelector('.purpose__container');
 footerNav.appendChild(headerNavContent);
 headerNav.appendChild(footerNavContent);
-footerFormContact.appendChild(document.importNode(fromContactTemplate.content, true));
-purposeForm.appendChild(document.importNode(fromContactTemplate.content, true));
+footerFormContact.appendChild(document.importNode(formContactTemplate.content, true));
+purposeForm.appendChild(document.importNode(formContactTemplate.content, true));
 },{}],"../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -159,7 +159,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57171" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56821" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
