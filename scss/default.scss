@@ -1,5 +1,11 @@
+@import "variables.scss";
+
 body {
   margin: 0;
+  margin: auto;
+}
+
+main, header, .footer__container {
   max-width: 1444px;
   margin: auto;
 }
@@ -15,5 +21,11 @@ article {
 }
 
 .container {
-  padding-left: 5%;
+  padding : 0;
+}
+
+@media(min-width : $min-width) {
+  .container {
+    padding-left : 1.5rem;
+  }
 }
